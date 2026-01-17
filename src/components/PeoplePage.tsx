@@ -54,7 +54,6 @@ export const PeoplePage = () => {
                   There are no people on the server
                 </p>
               )}
-
             </div>
           </div>
         </div>

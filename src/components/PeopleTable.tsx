@@ -53,7 +53,17 @@ export const PeopleTable = ({ people }: Props) => {
           if (query) {
             const lowerCaseQuery = query.toLowerCase();
 
-            if (!person.name.toLowerCase().includes(lowerCaseQuery)) {
+            if (
+              !person.name.toLowerCase().includes(lowerCaseQuery) &&
+              !(
+                person.fatherName &&
+                person.fatherName.toLowerCase().includes(lowerCaseQuery)
+              ) &&
+              !(
+                person.motherName &&
+                person.motherName.toLowerCase().includes(lowerCaseQuery)
+              )
+            ) {
               return false;
             }
           }
